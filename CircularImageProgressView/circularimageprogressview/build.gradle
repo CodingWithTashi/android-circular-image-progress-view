@@ -3,6 +3,7 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion 33
     buildToolsVersion "33.0.0"
+    namespace "com.mobstac.circularimageprogress"
 
     defaultConfig {
         minSdkVersion 21
@@ -38,6 +39,12 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
 }
 
+tasks.register('createJar', Copy) {
+    def buildType = 'release' // or 'debug' if you want debug classes
+    from("$buildDir/intermediates/aar_main_jar/${buildType}/classes.jar")
+    into("$buildDir/libs/")
+    rename { String fileName -> "circularimageprogressview.jar" }
+}
 // Commented out the external gradle script since it may cause issues with newer Gradle versions
 // If you need to publish this library, consider using modern publishing methods
 // apply from: 'https://raw.githubusercontent.com/k1slay/gradle-mvn-push/master/gradle-mvn-push.gradle'
