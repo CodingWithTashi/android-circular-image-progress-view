@@ -2,12 +2,13 @@ package com.mobstac.circularprogressdemo;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.mobstac.circularimageprogress.CircularImageProgressView;
 
 public class MainActivity extends AppCompatActivity {

@@ -13,10 +13,11 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.v7.widget.AppCompatDrawableManager;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
+
+import androidx.appcompat.widget.AppCompatDrawableManager;
 
 /**
  * Copyright (C) 2017 Mobstac, Inc.
